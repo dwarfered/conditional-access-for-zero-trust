@@ -13,7 +13,7 @@ $ErrorActionPreference = 'stop'
         A CA Policy mandating all Internals use a Compliant or AAD Hybrid Joined Device
 
     .NOTES
-        AUTHOR: https://github.com/dwarfered/msgraph-sdk-powershell-examples
+        AUTHOR: https://github.com/dwarfered/ConditionalAccessforZeroTrust
         UPDATED: 04-11-2023
 #>
 
