@@ -6,13 +6,13 @@ $ErrorActionPreference = 'stop'
 
 <#
     .SYNOPSIS
-        CA Policy: CA200-Internals-BaseProtection-AllApps-AnyPlatform-CompliantorAADHJ
+        CA Policy: CA201-Internals-IdentityProtection-AllApps-AnyPlatform-CombinedRegistration
 
     .DESCRIPTION
         A CA Policy mandating Compliant or AAD Hybrid Joined Devices to register security information.
 
     .NOTES
-        AUTHOR: https://github.com/dwarfered/msgraph-sdk-powershell-examples
+        AUTHOR: https://github.com/dwarfered/ConditionalAccessforZeroTrust
         UPDATED: 04-11-2023
 #>
 
