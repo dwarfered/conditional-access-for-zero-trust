@@ -71,7 +71,7 @@ else {
     $policy.State = 'disabled'
     
     $policy.Conditions.Users.IncludeGroups = $personaGroups['CA-Persona-Internals']
-    $policy.Conditions.Users.ExcludeGroups = @($personaGroups['CA-BreakGlassAccounts'], $personaGroups['CA-Persona-Internals-BaseProtection-Exclusion'])
+    $policy.Conditions.Users.ExcludeGroups = @($personaGroups['CA-BreakGlassAccounts'], $personaGroups['CA-Persona-Internals-BaseProtection-Exclusions'])
     $policy.Conditions.Applications.IncludeUserActions = 'urn:user:registersecurityinfo'
     $policy.Conditions.ClientAppTypes = 'all'
     

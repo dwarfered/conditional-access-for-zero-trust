@@ -59,7 +59,7 @@ function Initialize-RequiredPersonaGroups {
 
 $policyName = 'CA204-Internals-IdentityProtection-AllApps-AnyPlatform-BlockLegacyAuth'
 
-if (Get-MgIdentityConditionalAccessPolicy -Filter "displayName eq  '$policyName'") {
+if (Get-MgIdentityConditionalAccessPolicy -Filter "displayName eq '$policyName'") {
     Write-Output "'$policyName' already exists, no changes have been made."
 }
 else {
@@ -71,13 +71,13 @@ else {
     $policy.State = 'disabled'
 
     $policy.Conditions.Users.IncludeGroups = $personaGroups['CA-Persona-Internals']
-    $policy.Conditions.Users.ExcludeGroups = @($personaGroups['CA-BreakGlassAccounts'], $personaGroups['CA-Persona-Internals-BaseProtection-Exclusion'])
+    $policy.Conditions.Users.ExcludeGroups = @($personaGroups['CA-BreakGlassAccounts'], $personaGroups['CA-Persona-Internals-BaseProtection-Exclusions'])
     $policy.Conditions.Applications.IncludeApplications = 'All'
     $policy.Conditions.ClientAppTypes = @('exchangeActiveSync', 'other')
     
     $policy.GrantControls.Operator = 'OR'
     $policy.GrantControls.BuiltInControls = 'block'
     
-    New-MgIdentityConditionalAccessPolicy -BodyParameter $policy
+    New-MgIdentityConditionalAccessPolicy -BodyParameter $policy        
 }
 
