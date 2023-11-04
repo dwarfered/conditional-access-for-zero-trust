@@ -6,13 +6,13 @@ $ErrorActionPreference = 'stop'
 
 <#
     .SYNOPSIS
-        CA Policy: CA200-Internals-BaseProtection-AllApps-AnyPlatform-CompliantorAADHJ
+        CA Policy: CCA202-Internals-IdentityProtection-AllApps-AnyPlatform-MFAandPWDforHighUserRisk
 
     .DESCRIPTION
         A CA Policy requring MFA and a password change for High User Risk.
 
     .NOTES
-        AUTHOR: https://github.com/dwarfered/msgraph-sdk-powershell-examples
+        AUTHOR: https://github.com/dwarfered/ConditionalAccessforZeroTrust
         UPDATED: 04-11-2023
 #>
 
