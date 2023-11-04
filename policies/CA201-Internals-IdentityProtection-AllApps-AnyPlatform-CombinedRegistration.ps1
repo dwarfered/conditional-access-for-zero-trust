@@ -30,7 +30,7 @@ function Initialize-RequiredPersonaGroups {
     $prerequisiteGroups = @(
         'CA-Persona-Internals',
         'CA-BreakGlassAccounts',
-        'CA-Persona-Internals-BaseProtection-Exclusion')
+        'CA-Persona-Internals-BaseProtection-Exclusions')
 
     $prerequisiteGroups | ForEach-Object {
         $personaGroup = (Get-MgGroup -Filter "displayName eq '$PSItem'")
