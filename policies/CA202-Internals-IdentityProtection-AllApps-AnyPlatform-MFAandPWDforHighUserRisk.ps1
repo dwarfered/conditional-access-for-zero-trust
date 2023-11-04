@@ -9,7 +9,7 @@ $ErrorActionPreference = 'stop'
         CA Policy: CA200-Internals-BaseProtection-AllApps-AnyPlatform-CompliantorAADHJ
 
     .DESCRIPTION
-        A CA Policy mandating Compliant or AAD Hybrid Joined Devices to register security information.
+        A CA Policy requring MFA and a password change for High User Risk.
 
     .NOTES
         AUTHOR: https://github.com/dwarfered/msgraph-sdk-powershell-examples
