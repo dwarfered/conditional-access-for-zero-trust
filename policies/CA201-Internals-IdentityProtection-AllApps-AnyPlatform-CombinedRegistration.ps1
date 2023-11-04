@@ -1,4 +1,3 @@
-#Requires -Modules @{ ModuleName="Microsoft.Graph.Applications"; ModuleVersion="2.7.0" }
 #Requires -Modules @{ ModuleName="Microsoft.Graph.Authentication"; ModuleVersion="2.7.0" }
 #Requires -Modules @{ ModuleName="Microsoft.Graph.Identity.SignIns"; ModuleVersion="2.7.0" }
 #Requires -Modules @{ ModuleName="Microsoft.Graph.Groups"; ModuleVersion="2.7.0" }
