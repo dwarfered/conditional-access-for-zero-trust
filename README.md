@@ -16,8 +16,6 @@ Install-Module Microsoft.Graph.Beta -AllowClobber -Force
 
 <img src="images/overview.PNG" width="800">
 
-<small>*This collection is a work in progress*.</small>
-
 Conditional Access Policies as code deployed via the PowerShell SDK for Microsoft Graph.
 
 ## Policies
@@ -25,6 +23,8 @@ Conditional Access Policies as code deployed via the PowerShell SDK for Microsof
 > Policies can be deployed in any order and will be 'Off' by default. 
 
 > Persona groups will be created if they do not already exist.
+
+<small>*This collection is a work in progress*.</small>
 
 ### CA200-Internals-BaseProtection-AllApps-AnyPlatform-CompliantorAADHJ
 Internals require a Compliant or Domain-Joined Device.
