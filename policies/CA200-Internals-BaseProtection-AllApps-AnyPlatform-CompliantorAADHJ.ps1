@@ -13,7 +13,7 @@ $ErrorActionPreference = 'stop'
         A CA Policy mandating all Internals use a Compliant or AAD Hybrid Joined Device
 
     .NOTES
-        AUTHOR: https://github.com/dwarfered/ConditionalAccessforZeroTrust
+        AUTHOR: https://github.com/dwarfered/conditional-access-for-zero-trust
         UPDATED: 04-11-2023
 #>
 
