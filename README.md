@@ -23,6 +23,7 @@ Conditional Access Policies as code deployed via the PowerShell SDK for Microsof
 ## Policies
 
 > Policies can be deployed in any order and will be 'Off' by default. 
+
 > Persona groups will be created if they do not already exist.
 
 ### CA200-Internals-BaseProtection-AllApps-AnyPlatform-CompliantorAADHJ
