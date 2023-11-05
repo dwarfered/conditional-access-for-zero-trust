@@ -14,7 +14,7 @@ Optionally, also install:
 Install-Module Microsoft.Graph.Beta -AllowClobber -Force
 ```
 
-<img src="images/internals.PNG" width="800">
+<img src="images/overview.PNG" width="800">
 
 <small>*This collection is a work in progress*.</small>
 
@@ -46,3 +46,14 @@ Internals accessing Office 365 from iOS or Android must use an Approved App or a
 ### CA207-Internals-AttackSurfaceReduction-AllApps-AnyPlatform-BlockUnknownPlatforms
 Internals on unknown platforms are blocked.
 
+### CA400-Guests-BaseProtection-AllApps-AnyPlatform-MFA
+Guests must perform MFA.
+
+### CA402-Guests-IdentityProtection-AllApps-AnyPlatform-MFAforMediumandHighUserandSignInRisk
+Guests with Medium or High Risk must always perform MFA.
+
+### CA403-Guests-IdentityProtection-AllApps-AnyPlatform-BlockLegacyAuth
+Guests are blocked from Legacy Authentication methods.
+
+### CA406-Guests-DataProtection-AllApps-AnyPlatform-SignInSessionPolicy
+Guests have a limited Sign-In Session.
