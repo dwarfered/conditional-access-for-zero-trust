@@ -12,7 +12,7 @@ $ErrorActionPreference = 'stop'
         Workload Identities are blocked from untrusted locations.
 
     .NOTES
-        AUTHOR: https://github.com/dwarfered/ConditionalAccessforZeroTrust
+        AUTHOR: https://github.com/dwarfered/conditional-access-for-zero-trust
         UPDATED: 05-11-2023
 
         Requires Workload Identity Premium License
