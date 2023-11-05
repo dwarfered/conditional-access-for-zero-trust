@@ -20,27 +20,29 @@ Install-Module Microsoft.Graph.Beta -AllowClobber -Force
 
 Conditional Access Policies as code deployed via the PowerShell SDK for Microsoft Graph.
 
-## CA200-Internals-BaseProtection-AllApps-AnyPlatform-CompliantorAADHJ
+## Policies
+
+### CA200-Internals-BaseProtection-AllApps-AnyPlatform-CompliantorAADHJ
 Internals require a Compliant or Domain-Joined Device.
 
-## CA201-Internals-IdentityProtection-AllApps-AnyPlatform-CombinedRegistration
+### CA201-Internals-IdentityProtection-AllApps-AnyPlatform-CombinedRegistration
 Internals performing Security registration (ie. MFA enrollment) require a Compliant or Domain-Joined Device.
 
-## CA202-Internals-IdentityProtection-AllApps-AnyPlatform-MFAandPWDforHighUserRisk
+### CA202-Internals-IdentityProtection-AllApps-AnyPlatform-MFAandPWDforHighUserRisk
 Internals with High User Risk must perform MFA and change their password.
 
-## CA203-Internals-IdentityProtection-AllApps-AnyPlatform-MFAforHighSignInRisk
+### CA203-Internals-IdentityProtection-AllApps-AnyPlatform-MFAforHighSignInRisk
 Internals with High Sign-In Risk must perform MFA.
 
-## CA204-Internals-IdentityProtection-AllApps-AnyPlatform-BlockLegacyAuth
+### CA204-Internals-IdentityProtection-AllApps-AnyPlatform-BlockLegacyAuth
 Internals are blocked from Legacy Authentication methods.
 
-## CA205-Internals-AppProtection-MicrosoftIntuneEnrollment-AnyPlatform-MFA
+### CA205-Internals-AppProtection-MicrosoftIntuneEnrollment-AnyPlatform-MFA
 Internals must perform MFA to enroll a device.
 
-## CA206-Internals-DataandAppProtection-Office365-iOSorAndroid-ClientAppORAPP
+### CA206-Internals-DataandAppProtection-Office365-iOSorAndroid-ClientAppORAPP
 Internals accessing Office 365 from iOS or Android must use an Approved App or an App Protection Policy.
 
-## CA207-Internals-AttackSurfaceReduction-AllApps-AnyPlatform-BlockUnknownPlatforms
+### CA207-Internals-AttackSurfaceReduction-AllApps-AnyPlatform-BlockUnknownPlatforms
 Internals on unknown platforms are blocked.
 
