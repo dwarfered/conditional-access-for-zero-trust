@@ -26,38 +26,50 @@ Conditional Access Policies as code deployed via the PowerShell SDK for Microsof
 
 <small>*This collection is a work in progress*.</small>
 
-### CA200-Internals-BaseProtection-AllApps-AnyPlatform-CompliantorAADHJ
+### Internals
+
+#### CA200-Internals-BaseProtection-AllApps-AnyPlatform-CompliantorAADHJ
 Internals require a Compliant or Domain-Joined Device.
 
-### CA201-Internals-IdentityProtection-AllApps-AnyPlatform-CombinedRegistration
+#### CA201-Internals-IdentityProtection-AllApps-AnyPlatform-CombinedRegistration
 Internals performing Security registration (ie. MFA enrollment) require a Compliant or Domain-Joined Device.
 
-### CA202-Internals-IdentityProtection-AllApps-AnyPlatform-MFAandPWDforHighUserRisk
+#### CA202-Internals-IdentityProtection-AllApps-AnyPlatform-MFAandPWDforHighUserRisk
 Internals with High User Risk must perform MFA and change their password.
 
-### CA203-Internals-IdentityProtection-AllApps-AnyPlatform-MFAforHighSignInRisk
+#### CA203-Internals-IdentityProtection-AllApps-AnyPlatform-MFAforHighSignInRisk
 Internals with High Sign-In Risk must perform MFA.
 
-### CA204-Internals-IdentityProtection-AllApps-AnyPlatform-BlockLegacyAuth
+#### CA204-Internals-IdentityProtection-AllApps-AnyPlatform-BlockLegacyAuth
 Internals are blocked from Legacy Authentication methods.
 
-### CA205-Internals-AppProtection-MicrosoftIntuneEnrollment-AnyPlatform-MFA
+#### CA205-Internals-AppProtection-MicrosoftIntuneEnrollment-AnyPlatform-MFA
 Internals must perform MFA to enroll a device.
 
-### CA206-Internals-DataandAppProtection-Office365-iOSorAndroid-ClientAppORAPP
+#### CA206-Internals-DataandAppProtection-Office365-iOSorAndroid-ClientAppORAPP
 Internals accessing Office 365 from iOS or Android must use an Approved App or an App Protection Policy.
 
-### CA207-Internals-AttackSurfaceReduction-AllApps-AnyPlatform-BlockUnknownPlatforms
+#### CA207-Internals-AttackSurfaceReduction-AllApps-AnyPlatform-BlockUnknownPlatforms
 Internals on unknown platforms are blocked.
 
-### CA400-Guests-BaseProtection-AllApps-AnyPlatform-MFA
+### Guests
+
+#### CA400-Guests-BaseProtection-AllApps-AnyPlatform-MFA
 Guests must perform MFA.
 
-### CA402-Guests-IdentityProtection-AllApps-AnyPlatform-MFAforMediumandHighUserandSignInRisk
+#### CA402-Guests-IdentityProtection-AllApps-AnyPlatform-MFAforMediumandHighUserandSignInRisk
 Guests with Medium or High Risk must always perform MFA.
 
-### CA403-Guests-IdentityProtection-AllApps-AnyPlatform-BlockLegacyAuth
+#### CA403-Guests-IdentityProtection-AllApps-AnyPlatform-BlockLegacyAuth
 Guests are blocked from Legacy Authentication methods.
 
-### CA406-Guests-DataProtection-AllApps-AnyPlatform-SignInSessionPolicy
+#### CA406-Guests-DataProtection-AllApps-AnyPlatform-SignInSessionPolicy
 Guests have a limited Sign-In Session.
+
+### Workload Identities
+
+#### CA900-WorkloadIdentities-BaseProtection-AllApps-AnyPlatform-BlockUntrustedLocations
+Workload Identities in untrusted locations are blocked.
+
+#### CA901-WorkloadIdentities-BaseProtection-AllApps-AnyPlatform-BlockHighRisk
+Workload Identities with High Risk are blocked.
