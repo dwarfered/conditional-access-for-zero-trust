@@ -29,7 +29,8 @@ function Initialize-RequiredPersonaGroups {
     # Checks they exist and create if missing.
     $prerequisiteGroups = @(
         'CA-BreakGlassAccounts',
-        'CA-Persona-Guests-BaseProtection-Exclusions')
+        'CA-Persona-Guests-BaseProtection-Exclusions',
+        'CA-Persona-GuestAdmins')
 
     $prerequisiteGroups | ForEach-Object {
         $personaGroup = (Get-MgGroup -Filter "displayName eq '$PSItem'")
@@ -70,8 +71,13 @@ else {
     $policy.State = 'disabled'
 
     $policy.Conditions.Users.IncludeGuestsOrExternalUsers.ExternalTenants.MembershipKind = 'all'
-    $policy.Conditions.Users.IncludeGuestsOrExternalUsers.GuestOrExternalUserTypes = 'internalGuest,b2bCollaborationGuest,b2bCollaborationMember,b2bDirectConnectUser,otherExternalUser,serviceProvider'
-    $policy.Conditions.Users.ExcludeGroups = @($personaGroups['CA-BreakGlassAccounts'], $personaGroups['CA-Persona-Guests-BaseProtection-Exclusions'])
+    $policy.Conditions.Users.IncludeGuestsOrExternalUsers.GuestOrExternalUserTypes = 'internalGuest,
+    b2bCollaborationGuest,b2bCollaborationMember,b2bDirectConnectUser,otherExternalUser,serviceProvider'
+    $policy.Conditions.Users.ExcludeGroups = @(
+        $personaGroups['CA-BreakGlassAccounts'],
+        $personaGroups['CA-Persona-Guests-BaseProtection-Exclusions'],
+        $personaGroups['CA-Persona-GuestAdmins']
+    )
     $policy.Conditions.Applications.IncludeApplications = 'All'
     $policy.Conditions.ClientAppTypes = 'all'
     
