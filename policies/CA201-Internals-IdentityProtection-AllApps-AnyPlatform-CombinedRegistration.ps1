@@ -12,7 +12,7 @@ $ErrorActionPreference = 'stop'
         A CA Policy mandating Compliant or AAD Hybrid Joined Devices to register security information.
 
     .NOTES
-        AUTHOR: https://github.com/dwarfered/ConditionalAccessforZeroTrust
+        AUTHOR: https://github.com/dwarfered/conditional-access-for-zero-trust
         UPDATED: 04-11-2023
 #>
 
