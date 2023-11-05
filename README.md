@@ -1,4 +1,4 @@
-# ConditionalAccessforZeroTrust
+# Conditional Access for Zero Trust
 
 Zero Trust Persona-based Azure AD Conditional Access Policies
 
