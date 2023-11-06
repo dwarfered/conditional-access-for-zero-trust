@@ -30,7 +30,7 @@ function Initialize-RequiredPersonaGroups {
     $prerequisiteGroups = @(
         'CA-Persona-Internals',
         'CA-BreakGlassAccounts',
-        'CA-Persona-Internals-BaseProtection-Exclusions')
+        'CA-Persona-Internals-AttackSurfaceReduction-Exclusions')
 
     $prerequisiteGroups | ForEach-Object {
         $personaGroup = (Get-MgGroup -Filter "displayName eq '$PSItem'")
@@ -71,7 +71,7 @@ else {
     $policy.State = 'disabled'
 
     $policy.Conditions.Users.IncludeGroups = $personaGroups['CA-Persona-Internals']
-    $policy.Conditions.Users.ExcludeGroups = @($personaGroups['CA-BreakGlassAccounts'], $personaGroups['CA-Persona-Internals-BaseProtection-Exclusions'])
+    $policy.Conditions.Users.ExcludeGroups = @($personaGroups['CA-BreakGlassAccounts'], $personaGroups['CA-Persona-Internals-AttackSurfaceReduction-Exclusions'])
     $policy.Conditions.Applications.IncludeApplications = 'All'
     $policy.Conditions.ClientAppTypes = 'all'
     $policy.Conditions.Platforms.ExcludePlatforms = @('android', 'iOS', 'windows', 'macOS', 'linux')
