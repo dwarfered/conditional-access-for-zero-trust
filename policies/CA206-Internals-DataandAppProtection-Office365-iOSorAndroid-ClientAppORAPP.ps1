@@ -30,7 +30,8 @@ function Initialize-RequiredPersonaGroups {
     $prerequisiteGroups = @(
         'CA-Persona-Internals',
         'CA-BreakGlassAccounts',
-        'CA-Persona-Internals-BaseProtection-Exclusions')
+        'CA-Persona-Internals-DataProtection-Exclusions',
+        'CA-Persona-Internals-AppProtection-Exclusions')
 
     $prerequisiteGroups | ForEach-Object {
         $personaGroup = (Get-MgGroup -Filter "displayName eq '$PSItem'")
@@ -71,13 +72,15 @@ else {
     $policy.State = 'disabled'
 
     $policy.Conditions.Users.IncludeGroups = $personaGroups['CA-Persona-Internals']
-    $policy.Conditions.Users.ExcludeGroups = @($personaGroups['CA-BreakGlassAccounts'], $personaGroups['CA-Persona-Internals-BaseProtection-Exclusions'])
+    $policy.Conditions.Users.ExcludeGroups = @($personaGroups['CA-BreakGlassAccounts'],
+        $personaGroups['CA-Persona-Internals-AppProtection-Exclusions'],
+        $personaGroups['CA-Persona-Internals-DataProtection-Exclusions'])
     $policy.Conditions.Applications.IncludeApplications = 'Office365'
     $policy.Conditions.ClientAppTypes = 'all'
     $policy.Conditions.Platforms.IncludePlatforms = @('android', 'iOS')
     
     $policy.GrantControls.Operator = 'OR'
-    $policy.GrantControls.BuiltInControls = @('approvedApplication','compliantApplication')
+    $policy.GrantControls.BuiltInControls = @('approvedApplication', 'compliantApplication')
     
     New-MgIdentityConditionalAccessPolicy -BodyParameter $policy
 }
